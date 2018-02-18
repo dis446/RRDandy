@@ -30,6 +30,24 @@ class Booth
     end
   end
 
+  def set_judges(num)
+    (1..num).each do
+      if @booth_queue.empty?
+        raise "judges must be in the queue in order to add to the booth"
+      end
+      judge = @booth_queue.shift
+      @booth_queue<<judge
+    end
+  end
+
+  def increase_vote1
+    @vote1 += 1
+  end
+
+  def increase_vote2
+    @vote2 += 1
+  end
+
   def get_winner
     #tally the votes here and determine the winner
     # go through all the judges and get who they vvoted for, then add to the

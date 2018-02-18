@@ -9,6 +9,7 @@ attr_accessor :children
     @children = []
   end
 
+
   #adds a permission or a command object
   def add!(child)
     #should add defensive check here: is the child a Permission or a Command?
