@@ -1,8 +1,11 @@
 class Stage
   def initialize
     @rappers = []
+    @rap_queue = []
     #should make a defensive check for rappers ot maek sure theres 2 people in it
   end
+
+  attr_accessor :rap_queue
 
   def add_rappers(player1, player2)
     player1.role_permissions<<Rapper

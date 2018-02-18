@@ -1,5 +1,6 @@
 class Booth
   def initialize
+    @booth_queue = []
     @booth_seats = []
     @vote1 = 0
     @vote2 = 0
